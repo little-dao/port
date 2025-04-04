@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone, Linkedin } from "lucide-react"
@@ -7,94 +6,126 @@ import Link from "next/link"
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="section-container bg-secondary">
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-3xl font-bold tracking-tighter text-center mb-12 text-gray-900">Contact Me</h2>
-        <div className="grid gap-10 md:grid-cols-2 lg:gap-16">
-          <div>
-            <Card className="border-0 shadow-md h-full">
-              <CardHeader>
-                <CardTitle>Get In Touch</CardTitle>
-                <CardDescription>Fill out the form and I'll get back to you as soon as possible.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
-                  <div className="grid gap-4">
-                    <div className="grid gap-2">
-                      <label htmlFor="name" className="text-sm font-medium leading-none">
-                        Name
-                      </label>
-                      <Input id="name" placeholder="Your name" />
-                    </div>
-                    <div className="grid gap-2">
-                      <label htmlFor="email" className="text-sm font-medium leading-none">
-                        Email
-                      </label>
-                      <Input id="email" type="email" placeholder="Your email" />
-                    </div>
+        <div className="flex flex-col items-center">
+          <div className="w-16 h-1 bg-amber-500 mb-6"></div>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-center mb-12 gradient-heading">
+            Contact Me
+          </h2>
+        </div>
+        <div className="bloomberg-section p-4">
+          <div className="flex items-center mb-4 border-b border-amber-500/30 pb-2">
+            <div className="text-xs text-amber-500 font-mono">CONTACT</div>
+            <div className="ml-auto text-xs text-gray-400 font-mono">HOWARD ZHU | GET IN TOUCH</div>
+          </div>
+          <div className="grid gap-10 md:grid-cols-2 lg:gap-16">
+            <div className="border border-amber-500/20 bg-[#0D2544] p-4">
+              <div className="border-b border-amber-500/20 pb-4 mb-4">
+                <h3 className="text-amber-500 font-medium">Get In Touch</h3>
+                <div className="text-gray-400 text-sm">
+                  Fill out the form and I'll get back to you as soon as possible.
+                </div>
+              </div>
+              <form className="space-y-4">
+                <div className="grid gap-4">
+                  <div className="grid gap-2">
+                    <label htmlFor="name" className="text-sm font-medium leading-none text-gray-300">
+                      Name
+                    </label>
+                    <Input
+                      id="name"
+                      placeholder="Your name"
+                      className="border-amber-500/20 bg-background focus:border-amber-500/50"
+                    />
                   </div>
                   <div className="grid gap-2">
-                    <label htmlFor="message" className="text-sm font-medium leading-none">
-                      Message
+                    <label htmlFor="email" className="text-sm font-medium leading-none text-gray-300">
+                      Email
                     </label>
-                    <Textarea id="message" placeholder="Your message" className="min-h-[120px]" />
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Your email"
+                      className="border-amber-500/20 bg-background focus:border-amber-500/50"
+                    />
                   </div>
-                  <Button type="submit" className="w-full bg-gray-900 hover:bg-gray-800">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-          <div>
-            <Card className="border-0 shadow-md h-full">
-              <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
-                <CardDescription>Feel free to reach out through any of these channels.</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
+                </div>
+                <div className="grid gap-2">
+                  <label htmlFor="message" className="text-sm font-medium leading-none text-gray-300">
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    placeholder="Your message"
+                    className="min-h-[120px] border-amber-500/20 bg-background focus:border-amber-500/50"
+                  />
+                </div>
+                <Button type="submit" className="w-full bg-amber-500 hover:bg-amber-600 text-[#0D2544] font-medium">
+                  Send Message
+                </Button>
+              </form>
+            </div>
+            <div className="border border-amber-500/20 bg-[#0D2544] p-4">
+              <div className="border-b border-amber-500/20 pb-4 mb-4">
+                <h3 className="text-amber-500 font-medium">Contact Information</h3>
+                <div className="text-gray-400 text-sm">Feel free to reach out through any of these channels.</div>
+              </div>
+              <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-5 w-5 text-gray-700 mt-0.5" />
+                  <div className="p-2 bg-amber-500/10 rounded-full border border-amber-500/20">
+                    <MapPin className="h-5 w-5 text-amber-500" />
+                  </div>
                   <div>
-                    <h3 className="font-medium">Location</h3>
-                    <p className="text-gray-600">Waterloo, ON, Canada</p>
+                    <h4 className="font-medium text-gray-200">Location</h4>
+                    <p className="text-gray-400">Waterloo, ON, Canada</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Mail className="h-5 w-5 text-gray-700 mt-0.5" />
+                  <div className="p-2 bg-amber-500/10 rounded-full border border-amber-500/20">
+                    <Mail className="h-5 w-5 text-amber-500" />
+                  </div>
                   <div>
-                    <h3 className="font-medium">Email</h3>
-                    <p className="text-gray-600">
-                      <Link href="mailto:y578zhu@uwaterloo.ca" className="hover:underline">
+                    <h4 className="font-medium text-gray-200">Email</h4>
+                    <p className="text-gray-400">
+                      <Link href="mailto:y578zhu@uwaterloo.ca" className="hover:underline text-amber-500">
                         y578zhu@uwaterloo.ca
                       </Link>
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Phone className="h-5 w-5 text-gray-700 mt-0.5" />
+                  <div className="p-2 bg-amber-500/10 rounded-full border border-amber-500/20">
+                    <Phone className="h-5 w-5 text-amber-500" />
+                  </div>
                   <div>
-                    <h3 className="font-medium">Phone</h3>
-                    <p className="text-gray-600">
-                      <Link href="tel:4167053940" className="hover:underline">
+                    <h4 className="font-medium text-gray-200">Phone</h4>
+                    <p className="text-gray-400">
+                      <Link href="tel:4167053940" className="hover:underline text-amber-500">
                         (416) 705-3940
                       </Link>
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Linkedin className="h-5 w-5 text-gray-700 mt-0.5" />
+                  <div className="p-2 bg-amber-500/10 rounded-full border border-amber-500/20">
+                    <Linkedin className="h-5 w-5 text-amber-500" />
+                  </div>
                   <div>
-                    <h3 className="font-medium">LinkedIn</h3>
-                    <p className="text-gray-600">
-                      <Link href="https://linkedin.com/in/howard-zhu" className="hover:underline" target="_blank">
+                    <h4 className="font-medium text-gray-200">LinkedIn</h4>
+                    <p className="text-gray-400">
+                      <Link
+                        href="https://linkedin.com/in/howard-zhu"
+                        className="hover:underline text-amber-500"
+                        target="_blank"
+                      >
                         linkedin.com/in/howard-zhu
                       </Link>
                     </p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>

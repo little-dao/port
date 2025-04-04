@@ -1,5 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-
 export function Experience() {
   const experiences = [
     {
@@ -49,29 +47,41 @@ export function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="section-container bg-secondary">
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-3xl font-bold tracking-tighter text-center mb-12 text-gray-900">Work Experience</h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
-          {experiences.map((exp, index) => (
-            <Card key={index} className="border-0 shadow-md">
-              <CardHeader>
-                <CardTitle>{exp.title}</CardTitle>
-                <CardDescription>
-                  {exp.company} | {exp.location} | {exp.period}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc pl-5 space-y-2">
-                  {exp.description.map((item, idx) => (
-                    <li key={idx} className="text-gray-600">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="flex flex-col items-center">
+          <div className="w-16 h-1 bg-amber-500 mb-6"></div>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-center mb-12 gradient-heading">
+            Work Experience
+          </h2>
+        </div>
+        <div className="bloomberg-section p-4">
+          <div className="flex items-center mb-4 border-b border-amber-500/30 pb-2">
+            <div className="text-xs text-amber-500 font-mono">EXPERIENCE</div>
+            <div className="ml-auto text-xs text-gray-400 font-mono">HOWARD ZHU | CAREER HISTORY</div>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+            {experiences.map((exp, index) => (
+              <div key={index} className="border border-amber-500/20 bg-[#0D2544]">
+                <div className="border-b border-amber-500/20 bg-gradient-to-r from-amber-500/5 to-transparent p-4">
+                  <h3 className="text-amber-500 font-medium">{exp.title}</h3>
+                  <div className="text-gray-300 font-medium mt-1">{exp.company}</div>
+                  <div className="text-gray-400 text-sm font-mono">
+                    {exp.location} | {exp.period}
+                  </div>
+                </div>
+                <div className="p-4">
+                  <ul className="list-disc pl-5 space-y-2">
+                    {exp.description.map((item, idx) => (
+                      <li key={idx} className="text-gray-300 text-sm">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
