@@ -18,34 +18,34 @@ export function Hero() {
       </div>
 
       {/* Ticker tape */}
-      {/*<div className="ticker-tape">*/}
-      {/*  <div className="animate-[marquee_30s_linear_infinite]">*/}
-      {/*    <span className="ticker-item">*/}
-      {/*      <span className="text-amber-500">SPX</span> <span className="text-green-500">+1.2%</span>*/}
-      {/*    </span>*/}
-      {/*    <span className="ticker-item">*/}
-      {/*      <span className="text-amber-500">NASDAQ</span> <span className="text-green-500">+0.8%</span>*/}
-      {/*    </span>*/}
-      {/*    <span className="ticker-item">*/}
-      {/*      <span className="text-amber-500">DOW</span> <span className="text-red-500">-0.3%</span>*/}
-      {/*    </span>*/}
-      {/*    <span className="ticker-item">*/}
-      {/*      <span className="text-amber-500">USD/CAD</span> <span className="text-green-500">+0.2%</span>*/}
-      {/*    </span>*/}
-      {/*    <span className="ticker-item">*/}
-      {/*      <span className="text-amber-500">BTC/USD</span> <span className="text-green-500">+2.5%</span>*/}
-      {/*    </span>*/}
-      {/*    <span className="ticker-item">*/}
-      {/*      <span className="text-amber-500">ETH/USD</span> <span className="text-green-500">+1.7%</span>*/}
-      {/*    </span>*/}
-      {/*    <span className="ticker-item">*/}
-      {/*      <span className="text-amber-500">GOLD</span> <span className="text-red-500">-0.4%</span>*/}
-      {/*    </span>*/}
-      {/*    <span className="ticker-item">*/}
-      {/*      <span className="text-amber-500">OIL</span> <span className="text-green-500">+0.9%</span>*/}
-      {/*    </span>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      <div className="ticker-tape">
+        <div className="animate-[marquee_30s_linear_infinite]">
+          <span className="ticker-item">
+            <span className="text-amber-500">SPX</span> <span className="text-green-500">+1.2%</span>
+          </span>
+          <span className="ticker-item">
+            <span className="text-amber-500">NASDAQ</span> <span className="text-green-500">+0.8%</span>
+          </span>
+          <span className="ticker-item">
+            <span className="text-amber-500">DOW</span> <span className="text-red-500">-0.3%</span>
+          </span>
+          <span className="ticker-item">
+            <span className="text-amber-500">USD/CAD</span> <span className="text-green-500">+0.2%</span>
+          </span>
+          <span className="ticker-item">
+            <span className="text-amber-500">BTC/USD</span> <span className="text-green-500">+2.5%</span>
+          </span>
+          <span className="ticker-item">
+            <span className="text-amber-500">ETH/USD</span> <span className="text-green-500">+1.7%</span>
+          </span>
+          <span className="ticker-item">
+            <span className="text-amber-500">GOLD</span> <span className="text-red-500">-0.4%</span>
+          </span>
+          <span className="ticker-item">
+            <span className="text-amber-500">OIL</span> <span className="text-green-500">+0.9%</span>
+          </span>
+        </div>
+      </div>
 
       {/* Main content */}
       <div className="flex-1 flex items-center justify-center bloomberg-grid">

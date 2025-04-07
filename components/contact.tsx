@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone, Linkedin } from "lucide-react"
 import Link from "next/link"
 
@@ -19,55 +16,9 @@ export function Contact() {
             <div className="text-xs text-amber-500 font-mono">CONTACT</div>
             <div className="ml-auto text-xs text-gray-400 font-mono">HOWARD ZHU | GET IN TOUCH</div>
           </div>
-          {/*<div className="grid gap-10 md:grid-cols-2 lg:gap-16">*/}
-          {/*  <div className="border border-amber-500/20 bg-[#0D2544] p-4">*/}
-          {/*    <div className="border-b border-amber-500/20 pb-4 mb-4">*/}
-          {/*      <h3 className="text-amber-500 font-medium">Get In Touch</h3>*/}
-          {/*      <div className="text-gray-400 text-sm">*/}
-          {/*        Fill out the form and I'll get back to you as soon as possible.*/}
-          {/*      </div>*/}
-          {/*    </div>*/}
-          {/*    <form className="space-y-4">*/}
-          {/*      <div className="grid gap-4">*/}
-          {/*        <div className="grid gap-2">*/}
-          {/*          <label htmlFor="name" className="text-sm font-medium leading-none text-gray-300">*/}
-          {/*            Name*/}
-          {/*          </label>*/}
-          {/*          <Input*/}
-          {/*            id="name"*/}
-          {/*            placeholder="Your name"*/}
-          {/*            className="border-amber-500/20 bg-background focus:border-amber-500/50"*/}
-          {/*          />*/}
-          {/*        </div>*/}
-          {/*        <div className="grid gap-2">*/}
-          {/*          <label htmlFor="email" className="text-sm font-medium leading-none text-gray-300">*/}
-          {/*            Email*/}
-          {/*          </label>*/}
-          {/*          <Input*/}
-          {/*            id="email"*/}
-          {/*            type="email"*/}
-          {/*            placeholder="Your email"*/}
-          {/*            className="border-amber-500/20 bg-background focus:border-amber-500/50"*/}
-          {/*          />*/}
-          {/*        </div>*/}
-          {/*      </div>*/}
-          {/*      <div className="grid gap-2">*/}
-          {/*        <label htmlFor="message" className="text-sm font-medium leading-none text-gray-300">*/}
-          {/*          Message*/}
-          {/*        </label>*/}
-          {/*        <Textarea*/}
-          {/*          id="message"*/}
-          {/*          placeholder="Your message"*/}
-          {/*          className="min-h-[120px] border-amber-500/20 bg-background focus:border-amber-500/50"*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <Button type="submit" className="w-full bg-amber-500 hover:bg-amber-600 text-[#0D2544] font-medium">*/}
-          {/*        Send Message*/}
-          {/*      </Button>*/}
-          {/*    </form>*/}
-          {/*  </div>*/}
-            <div className="border border-amber-500/20 bg-[#0D2544] p-4">
-              <div className="border-b border-amber-500/20 pb-4 mb-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="border border-amber-500/20 bg-[#0D2544] p-6">
+              <div className="border-b border-amber-500/20 pb-4 mb-6">
                 <h3 className="text-amber-500 font-medium">Contact Information</h3>
                 <div className="text-gray-400 text-sm">Feel free to reach out through any of these channels.</div>
               </div>
@@ -119,7 +70,7 @@ export function Contact() {
                         className="hover:underline text-amber-500"
                         target="_blank"
                       >
-                        linkedin.com/in/howard-zhu
+                        linkedin.com/in/yinghe-zhu
                       </Link>
                     </p>
                   </div>
