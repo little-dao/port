@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowDownIcon, ChevronRight } from "lucide-react"
-import { TickerTape } from "./ticker-tape"
+import { ArrowDownIcon, ChevronRight, Quote } from "lucide-react"
 
 export function Hero() {
   return (
@@ -18,13 +17,21 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Market data date indicator */}
-      <div className="bg-[#0D2544] px-4 py-1 border-b border-amber-500/20">
-        <span className="text-xs text-amber-500 font-mono">MARKET DATA: APRIL 15, 2024 CLOSING</span>
+      {/* Quote Section */}
+      <div className="bg-[#0D2544] border-b border-amber-500/30">
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex items-start">
+            <Quote className="h-4 w-4 text-amber-500 mr-2 mt-0.5 flex-shrink-0" />
+            <div className="overflow-hidden">
+              <p className="text-sm text-gray-300 font-mono leading-relaxed typing-animation">
+                "It ain't what you don't know that gets you into trouble. It's what you know for sure that just ain't
+                so."
+              </p>
+              <p className="text-xs text-amber-500 font-mono mt-1 typing-animation-delay">― Mark Twain</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* Real-time Ticker tape */}
-      <TickerTape />
 
       {/* Main content */}
       <div className="flex-1 flex items-center justify-center bloomberg-grid">

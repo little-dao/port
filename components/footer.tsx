@@ -11,13 +11,16 @@ export function Footer() {
           </div>
           <div className="flex flex-col items-center md:items-end">
             <p className="text-sm text-gray-500 mb-2">© {new Date().getFullYear()} Howard Zhu. All rights reserved.</p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-2">
               <Link href="#" className="text-sm text-gray-400 hover:text-amber-500 transition-colors">
                 Privacy Policy
               </Link>
               <Link href="#" className="text-sm text-gray-400 hover:text-amber-500 transition-colors">
                 Terms of Service
               </Link>
+            </div>
+            <div className="text-xs text-amber-500/70 font-mono">
+              LAST UPDATED: {new Date().toLocaleDateString()} {new Date().toLocaleTimeString()}
             </div>
           </div>
         </div>

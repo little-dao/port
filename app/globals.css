@@ -53,6 +53,7 @@
 @layer components {
   .gradient-heading {
     @apply bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent;
+    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.3));
   }
 
   .section-container {
@@ -65,12 +66,26 @@
 
   .terminal-border {
     @apply border border-amber-500/30 rounded-sm shadow-inner shadow-amber-900/10;
+    animation: pulse 4s infinite;
   }
 
   .bloomberg-grid {
     background-size: 40px 40px;
     background-image: linear-gradient(to right, rgba(255, 183, 0, 0.05) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 183, 0, 0.05) 1px, transparent 1px);
+    position: relative;
+  }
+
+  .bloomberg-grid::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(10, 25, 47, 0.05) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
   }
 
   .bloomberg-header {
@@ -116,5 +131,38 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(60, end);
+}
+
+.typing-animation-delay {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s steps(20, end);
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    border-color: rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    border-color: rgba(245, 158, 11, 0.5);
   }
 }
