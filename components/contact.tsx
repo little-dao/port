@@ -39,8 +39,8 @@ export function Contact() {
                   <div>
                     <h4 className="font-medium text-gray-200">Email</h4>
                     <p className="text-gray-400">
-                      <Link href="mailto:y578zhu@uwaterloo.ca" className="hover:underline text-amber-500">
-                        y578zhu@uwaterloo.ca
+                      <Link href="mailto:zhux2470@mylaurier.ca" className="hover:underline text-amber-500">
+                        zhux2470@mylaurier.ca
                       </Link>
                     </p>
                   </div>

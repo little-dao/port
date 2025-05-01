@@ -1,8 +1,15 @@
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, Lock, Github } from "lucide-react"
 import Link from "next/link"
 
 export function Projects() {
   const projects = [
+    {
+      title: "Momentum-trading",
+      description:
+        "Trading algorithm based on several momentum indicators with support of Machine Learning, and live paper-testing on IBKR python API.",
+      link: "#",
+      isPrivate: true,
+    },
     {
       title: "Quantify",
       description:
@@ -16,29 +23,31 @@ export function Projects() {
       link: "https://devpost.com/software/cyclia-submission",
     },
     {
+      title: "WLP4 Compiler",
+      description:
+        "Compiler written in C++ with detailed implementation of each component, including parser, assembler, etc. Utilizes both semantic and syntactic analysis.",
+      link: "#",
+      isPrivate: true,
+    },
+    {
       title: "Non-GAAP Reporting Analysis",
       description:
         "Directed by Darren Henderson at Laurier, implemented a program to collect data and management's justification from company annual/quarterly reports",
-      link: "#",
-      demo: true,
+      link: "https://github.com/little-dao/NONGAAP-DEMO",
+      github: true,
     },
     {
       title: "SEC Filings Database System",
       description:
         "Directed by Andrew Bauer at Waterloo, created a comprehensive database system similar to WRDS with better customization for researchers' needs. Deployed to serve entire UWaterloo staff/research/students",
-      link: "#",
-      demo: true,
+      link: "https://github.com/little-dao/SECIDX-DEMO",
+      github: true,
     },
     {
       title: "CIBC Exceptional Student Award",
-      description: "Recognition of exceptional CO-OP work at CIBC",
+      description: "Recognition of exceptional Co-op work at CIBC",
       link: "/cibc-award.pdf",
       isFile: true,
-    },
-    {
-      title: "Presidential & In-course Scholarship",
-      description: "For students with high application grade and course grade",
-      link: "#",
     },
   ]
 
@@ -62,7 +71,13 @@ export function Projects() {
                 <div className="border-b border-amber-500/20 bg-gradient-to-r from-amber-500/5 to-transparent p-4">
                   <h3 className="flex items-center gap-2 text-amber-500 font-medium">
                     {project.title}
-                    {project.link && project.link !== "#" && (
+                    {project.isPrivate && <Lock className="h-4 w-4 text-amber-500" />}
+                    {project.github && (
+                      <Link href={project.link} className="inline-flex" target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 text-amber-500" />
+                      </Link>
+                    )}
+                    {project.link && project.link !== "#" && !project.isPrivate && !project.github && (
                       <Link href={project.link} className="inline-flex" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 text-amber-500" />
                       </Link>
@@ -81,6 +96,17 @@ export function Projects() {
                 </div>
                 <div className="p-4">
                   <div className="text-gray-300 text-sm">{project.description}</div>
+                  {project.isPrivate && (
+                    <div className="mt-2 text-xs text-amber-500/80 italic">Available upon request</div>
+                  )}
+                  {project.github && (
+                    <div className="mt-2 flex items-center">
+                      <Github className="h-3 w-3 text-amber-500/80 mr-1" />
+                      <span className="text-xs text-amber-500/80">
+                        {project.link.replace("https://github.com/", "")}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

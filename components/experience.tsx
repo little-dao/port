@@ -6,12 +6,10 @@ export function Experience() {
       location: "Waterloo, ON",
       period: "Jan 2025 – Apr 2025",
       description: [
-        "Worked directly with AVP overseeing 50+ external funds (total AUM over 3 Billion)",
-        "Conducted 20+ attribution analysis on various types of funds using Bloomberg, assessed mandate alignment & PM's investment rationale with trade tracing",
-        "Participated in PM interviews, due diligence and investment committee meetings",
-        "Co-Designed & automated formal fund management process using Morningstar's Python API and Power BI",
-        "Assisted in the preparation of Funds/ETF reports and recommendations to senior management",
-        "Researched market trends, macroeconomic factors, and competitor strategies",
+        "Work directly with AVP overseeing 50+ external funds (total AUM over 3 Billion)",
+        "Conducted 20+ attribution analysis on various types of funds (balanced, equity, fixed income), assessing fund performance and mandate alignment",
+        "Co-Designed & automated formal fund management process using Morningstar API and Power BI to streamline performance tracking, reducing departmental labor by 80%",
+        "Research market trends, macroeconomic factors, and competitor strategies to provide insights on fund selection and optimization",
       ],
     },
     {
@@ -20,8 +18,8 @@ export function Experience() {
       location: "Waterloo, ON",
       period: "May 2023 – Present",
       description: [
-        "Directed by Darren Henderson on analysis of Non-GAAP reporting from company's annual/quarter reports",
-        "Directed by Andrew Bauer to create a comprehensive database system to better facilitate research needs on SEC filings",
+        "Laurier: Directed by Darren Henderson on analysis of Non-GAAP reporting from company's annual/quarter reports, implemented a program to collect data and management's justification",
+        "Waterloo: Directed by Andrew Bauer to create a comprehensive database system to better facilitate research needs on SEC filings. The project has a similar use to WRDS, with better customization of researcher's needs, deployed to serve entire UWaterloo staff/research/students",
       ],
     },
     {
@@ -30,7 +28,7 @@ export function Experience() {
       location: "Toronto, ON",
       period: "Jan 2023 – Apr 2023",
       description: [
-        "Led automation initiatives aligning data governance with OSFI compliance",
+        "Led automation initiatives aligning data governance with OSFI compliance. Designed process from scratch with great exposures to other teams, final product used by entire CIBC Tech Operation, serves approximately 120 Data Domain Admins and achieved 70% improvement",
         "Designed and implemented automated processes to streamline data reporting and vendor management",
       ],
     },
