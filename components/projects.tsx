@@ -5,18 +5,39 @@ export function Projects() {
   const projects = [
     {
       title: "Quantify",
-      description: "Enables Auto trading strategies with easy interfaces, visualization with back-testing results",
-      link: "#",
-    },
-    {
-      title: "CIBC Exceptional Student Award",
-      description: "Recognition of exceptional CO-OP work at CIBC",
-      link: "#",
+      description:
+        "Enables auto trading strategies with easy interfaces, visualization with back-testing results. A DeFi trading strategy platform built for the DoraHacks hackathon.",
+      link: "https://dorahacks.io/buidl/23040",
     },
     {
       title: "Team-SnowFlake",
       description:
         "Winner of data prediction modeling for DNA sequence of a company (Cylica) using python with various machine learning / statistical analysis techniques",
+      link: "https://devpost.com/software/cyclia-submission",
+    },
+    {
+      title: "Non-GAAP Reporting Analysis",
+      description:
+        "Directed by Darren Henderson at Laurier, implemented a program to collect data and management's justification from company annual/quarterly reports",
+      link: "#",
+      demo: true,
+    },
+    {
+      title: "SEC Filings Database System",
+      description:
+        "Directed by Andrew Bauer at Waterloo, created a comprehensive database system similar to WRDS with better customization for researchers' needs. Deployed to serve entire UWaterloo staff/research/students",
+      link: "#",
+      demo: true,
+    },
+    {
+      title: "CIBC Exceptional Student Award",
+      description: "Recognition of exceptional CO-OP work at CIBC",
+      link: "/cibc-award.pdf",
+      isFile: true,
+    },
+    {
+      title: "Presidential & In-course Scholarship",
+      description: "For students with high application grade and course grade",
       link: "#",
     },
   ]
@@ -41,10 +62,20 @@ export function Projects() {
                 <div className="border-b border-amber-500/20 bg-gradient-to-r from-amber-500/5 to-transparent p-4">
                   <h3 className="flex items-center gap-2 text-amber-500 font-medium">
                     {project.title}
-                    {project.link && (
+                    {project.link && project.link !== "#" && (
                       <Link href={project.link} className="inline-flex" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 text-amber-500" />
                       </Link>
+                    )}
+                    {project.demo && (
+                      <span className="text-xs bg-amber-500/20 text-amber-500 px-2 py-0.5 rounded-sm border border-amber-500/30">
+                        DEMO
+                      </span>
+                    )}
+                    {project.isFile && (
+                      <span className="text-xs bg-amber-500/20 text-amber-500 px-2 py-0.5 rounded-sm border border-amber-500/30">
+                        FILE
+                      </span>
                     )}
                   </h3>
                 </div>
@@ -59,4 +90,3 @@ export function Projects() {
     </section>
   )
 }
-

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowDownIcon, ChevronRight } from "lucide-react"
+import { TickerTape } from "./ticker-tape"
 
 export function Hero() {
   return (
@@ -8,7 +9,7 @@ export function Hero() {
       {/* Bloomberg-style header */}
       <div className="bloomberg-header">
         <div className="flex items-center">
-          <span className="text-amber-500 font-bold mr-2">ZHUTERM</span>
+          <span className="text-amber-500 font-bold mr-2">PORTFOLIO</span>
           <span className="text-xs text-gray-400">v1.0.0</span>
         </div>
         <div className="flex items-center space-x-4">
@@ -17,35 +18,13 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Ticker tape */}
-      <div className="ticker-tape">
-        <div className="animate-[marquee_30s_linear_infinite]">
-          <span className="ticker-item">
-            <span className="text-amber-500">SPX</span> <span className="text-green-500">+1.2%</span>
-          </span>
-          <span className="ticker-item">
-            <span className="text-amber-500">NASDAQ</span> <span className="text-green-500">+0.8%</span>
-          </span>
-          <span className="ticker-item">
-            <span className="text-amber-500">DOW</span> <span className="text-red-500">-0.3%</span>
-          </span>
-          <span className="ticker-item">
-            <span className="text-amber-500">USD/CAD</span> <span className="text-green-500">+0.2%</span>
-          </span>
-          <span className="ticker-item">
-            <span className="text-amber-500">BTC/USD</span> <span className="text-green-500">+2.5%</span>
-          </span>
-          <span className="ticker-item">
-            <span className="text-amber-500">ETH/USD</span> <span className="text-green-500">+1.7%</span>
-          </span>
-          <span className="ticker-item">
-            <span className="text-amber-500">GOLD</span> <span className="text-red-500">-0.4%</span>
-          </span>
-          <span className="ticker-item">
-            <span className="text-amber-500">OIL</span> <span className="text-green-500">+0.9%</span>
-          </span>
-        </div>
+      {/* Market data date indicator */}
+      <div className="bg-[#0D2544] px-4 py-1 border-b border-amber-500/20">
+        <span className="text-xs text-amber-500 font-mono">MARKET DATA: APRIL 15, 2024 CLOSING</span>
       </div>
+
+      {/* Real-time Ticker tape */}
+      <TickerTape />
 
       {/* Main content */}
       <div className="flex-1 flex items-center justify-center bloomberg-grid">
@@ -97,4 +76,3 @@ export function Hero() {
     </section>
   )
 }
-
