@@ -1,5 +1,6 @@
-import { ExternalLink, Lock, Github } from "lucide-react"
+import { ExternalLink, Lock, Github, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export function Projects() {
   const projects = [
@@ -110,6 +111,13 @@ export function Projects() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Button asChild className="bg-amber-500 hover:bg-amber-600 text-[#0D2544] font-medium">
+              <Link href="/projects" className="flex items-center">
+                View Detailed Project Showcase <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

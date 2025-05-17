@@ -10,6 +10,20 @@ export function Footer() {
             <p className="text-gray-400">Quant • Developer • Finance Professional</p>
           </div>
           <div className="flex flex-col items-center md:items-end">
+            <div className="flex space-x-6 mb-4">
+              <Link href="/" className="text-sm text-gray-400 hover:text-amber-500 transition-colors">
+                Home
+              </Link>
+              <Link href="/projects" className="text-sm text-gray-400 hover:text-amber-500 transition-colors">
+                Projects
+              </Link>
+              <Link href="/blog" className="text-sm text-gray-400 hover:text-amber-500 transition-colors">
+                Blog
+              </Link>
+              <Link href="#contact" className="text-sm text-gray-400 hover:text-amber-500 transition-colors">
+                Contact
+              </Link>
+            </div>
             <p className="text-sm text-gray-500 mb-2">© {new Date().getFullYear()} Howard Zhu. All rights reserved.</p>
             <div className="flex space-x-4 mb-2">
               <Link href="#" className="text-sm text-gray-400 hover:text-amber-500 transition-colors">

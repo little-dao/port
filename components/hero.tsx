@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowDownIcon, ChevronRight, Quote } from "lucide-react"
+import { ArrowDownIcon, ChevronRight, Quote, BookOpen, FolderOpen } from "lucide-react"
 
 export function Hero() {
   return (
@@ -12,6 +12,18 @@ export function Hero() {
           <span className="text-xs text-gray-400">v1.0.0</span>
         </div>
         <div className="flex items-center space-x-4">
+          <Link
+            href="/projects"
+            className="text-xs text-amber-500 hover:text-amber-400 transition-colors flex items-center"
+          >
+            <FolderOpen className="h-3 w-3 mr-1" /> Projects
+          </Link>
+          <Link
+            href="/blog"
+            className="text-xs text-amber-500 hover:text-amber-400 transition-colors flex items-center"
+          >
+            <BookOpen className="h-3 w-3 mr-1" /> Blog
+          </Link>
           <span className="text-xs text-gray-400">{new Date().toLocaleDateString()}</span>
           <span className="text-xs text-gray-400">{new Date().toLocaleTimeString()}</span>
         </div>
@@ -51,7 +63,7 @@ export function Hero() {
               Aspiring Quant / Developer / Finance Professional
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-[#0D2544] font-medium">
                 <Link href="#contact" className="flex items-center">
                   Contact Me <ChevronRight className="ml-1 h-4 w-4" />
@@ -65,6 +77,29 @@ export function Hero() {
               >
                 <Link href="/resume.pdf" target="_blank" className="flex items-center">
                   View Resume <ChevronRight className="ml-1 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4 mt-2">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 text-amber-500"
+              >
+                <Link href="/projects" className="flex items-center">
+                  <FolderOpen className="mr-2 h-5 w-5" /> Browse Projects
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 text-amber-500"
+              >
+                <Link href="/blog" className="flex items-center">
+                  <BookOpen className="mr-2 h-5 w-5" /> Read Blog
                 </Link>
               </Button>
             </div>
